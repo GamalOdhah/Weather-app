@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='weather.ico') }}">
+    <title>Go Weather</title>
+</head>
+<body>
+    <div class="logo-container">
+        <a href="/">
+        <div class="logo">Go Weather</div>
+        </a>
+        <a href="/note">
+            <div class="Note">Note</div>
+            </a>
+            <a href="/map">
+                <div class="Map">Map</div>
+                </a>
+        <div class="underline"></div>
+    </div>
+    <div class="container">
+        <div class="search-box">
+            <i class="fas fa-location-dot"></i>
+            <input type="text" placeholder="Enter your location">
+            <button class="fas fa-magnifying-glass"></button>
+        </div>
+
+        <div class="not-found">
+            <img src="{{ url_for('static', filename='images/404.png') }}" alt="Not Found">
+            <p>Sorry! Invalid location</p>
+        </div>
+
+        <div class="weather-box">
+            <img src="" alt="Weather Image">
+            <p class="temperature"></p>
+            <p class="description"></p>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="fas fa-water"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fas fa-wind"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='weather.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='weather.ico') }}">
+</head>
+<body>
+    <div class="logo-container">
+        <a href="/">
+            <div class="logo">Go Weather</div>
+        </a>
+        <a href="/note">
+            <div class="Note">Note</div>
+        </a>
+        <a href="/map">
+            <div class="Map">Map</div>
+        </a>
+        <div class="underline"></div>
+    </div>
+    <div class="map-container">
+        <img src="static/images/world-map.png" alt="World Map">
+        <div class="map-description">
+            <div class="map-title">World map</div>
+            <div class="map-content">
+                <p>
+                    You will find here a map pic of the world if you want to know their names and put them in my application to know the weather in it, thank you.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
